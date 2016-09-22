@@ -4,3 +4,6 @@
 \\mac\home\documents\visual studio 2013\Projects\DataStructuresGROUP\DataStructuresGROUP\obj\Debug\DataStructuresGROUP.csprojResolveAssemblyReference.cache
 \\mac\home\documents\visual studio 2013\Projects\DataStructuresGROUP\DataStructuresGROUP\obj\Debug\DataStructuresGROUP.exe
 \\mac\home\documents\visual studio 2013\Projects\DataStructuresGROUP\DataStructuresGROUP\obj\Debug\DataStructuresGROUP.pdb
+C:\Users\joeis\Source\Repos\Group1-1\DataStructuresGROUP\DataStructuresGROUP\bin\Debug\DataStructuresGROUP.exe.config
+C:\Users\joeis\Source\Repos\Group1-1\DataStructuresGROUP\DataStructuresGROUP\obj\Debug\DataStructuresGROUP.exe
+C:\Users\joeis\Source\Repos\Group1-1\DataStructuresGROUP\DataStructuresGROUP\obj\Debug\DataStructuresGROUP.pdb

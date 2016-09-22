@@ -11,6 +11,10 @@ namespace DataStructuresGROUP
         static void Main(string[] args)
         {
             int iChoice;
+            string test = "Try to figure this out";
+
+
+            // Does tihs get erased? 
 
             Console.WriteLine("1. Stack" +
                                 "\n2. Queue" +
