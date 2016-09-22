@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication6", "ConsoleApplication6\ConsoleApplication6.csproj", "{456C8A03-5046-497C-A39E-80061F2F74A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructuresGROUP", "DataStructuresGROUP\DataStructuresGROUP.csproj", "{CFA74C79-14B9-4BF3-81E3-F691B26188C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{456C8A03-5046-497C-A39E-80061F2F74A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{456C8A03-5046-497C-A39E-80061F2F74A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{456C8A03-5046-497C-A39E-80061F2F74A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{456C8A03-5046-497C-A39E-80061F2F74A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFA74C79-14B9-4BF3-81E3-F691B26188C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFA74C79-14B9-4BF3-81E3-F691B26188C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFA74C79-14B9-4BF3-81E3-F691B26188C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFA74C79-14B9-4BF3-81E3-F691B26188C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

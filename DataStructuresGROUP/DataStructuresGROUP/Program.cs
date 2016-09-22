@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication6
+namespace DataStructuresGROUP
 {
     class Program
     {
@@ -12,9 +12,9 @@ namespace ConsoleApplication6
         {
             int iChoice;
 
-            Console.WriteLine(  "1. Stack"+
+            Console.WriteLine("1. Stack" +
                                 "\n2. Queue" +
-                                "\n3. Dictionary" + 
+                                "\n3. Dictionary" +
                                 "\n4. Exit");
 
             Console.WriteLine("\nPick a menu item");
@@ -30,7 +30,7 @@ namespace ConsoleApplication6
                                  "\n6. Search Stack" +
                                  "\n7. Return to Main Menu");
             }
-            else if ( iChoice == 2)
+            else if (iChoice == 2)
             {
                 Console.WriteLine("\n1. Add one time to Queue" +
                                     "\n2. Add Huge List of Items to Queue" +
