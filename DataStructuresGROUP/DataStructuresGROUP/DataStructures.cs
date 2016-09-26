@@ -1,4 +1,29 @@
-﻿using System;
+﻿/* Authors: Carsen Beyer, Kate Cousineau, Joe Isabell, Kaitlyn Whipple 
+ * Date: 9-26-16
+ * Description: C# Data Structures Group Work
+ * Write a program in C# using a console application that 
+ * demonstrates the use of a Stack, Queue, and Dictionary (Map). 
+ * I want you to start trying to use GitHub for this assignment.
+ * Your application will be based around a simple menu. The functionality
+ * of each menu item is described in more detail below. The first menu prompt should be the following:
+1. Stack
+2. Queue
+3. Dictionary
+4. Exit
+ * And then more menus for each data structure
+1. Add one time to (Stack, Queue, Dictionary) 
+2. Add Huge List of Items to (Stack, Queue, Dictionary)
+3. Display (Stack, Queue, Dictionary )
+4. Delete from (Stack, Queue, Dictionary )
+5. Clear (Stack, Queue, Dictionary )
+6. Search (Stack, Queue, Dictionary )
+7. Return to Main Menu
+ * 
+ * 
+ */
+
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,10 +41,12 @@ namespace DataStructuresGROUP
 
         public static string readString(string sInput)
         {
+            //variables
             string sUserInput = sInput;
             int iNum;
             bool bCheck = true;
 
+            //exception handling for wrong data type and null inputs
             while (bCheck)
             {
                 if (int.TryParse(sUserInput, out iNum))
@@ -52,7 +79,7 @@ namespace DataStructuresGROUP
             return char.ToUpper(s[0]) + s.Substring(1);
         }
 
-
+        
         public virtual string AddOne()
         {
             return " ";
@@ -84,14 +111,16 @@ namespace DataStructuresGROUP
         }
     }
 
-
+    //stack menu options
     class myStack : MasterStructure
     {
+        //variables 
         Stack<string> stkStructure = new Stack<string>();
 
         string sUserInput;
         bool bCheck = true;
 
+        //adds one item to the stack from user
         public override string AddOne()
         {
             Console.Write("Enter a string to add to the Stack: ");
@@ -101,6 +130,7 @@ namespace DataStructuresGROUP
             return base.AddOne();
         }
 
+        //adds 2000 entries to the stack 
         public override string AddHuge()
         {
             stkStructure.Clear();
@@ -113,6 +143,7 @@ namespace DataStructuresGROUP
             return base.AddHuge();
         }
 
+        //displays items in stack and alerts user if it is empty
         public override string Display()
         {
             if (stkStructure.Count == 0)
@@ -131,6 +162,8 @@ namespace DataStructuresGROUP
             return base.Display();
         }
 
+        //deletes item in stack that user wants to delete
+        //alerts user if stack is empty
         public override string Delete()
         {
 
@@ -141,14 +174,14 @@ namespace DataStructuresGROUP
             else
             {
 
-                //pops off the original stack and puts it in a stack place holder 
+                //creates stack place holder
                 Stack<string> stackholder = new Stack<string>();
 
                 Console.Write("Which item do you want to delete from the stack? ");
                 string sDelete = readString(Console.ReadLine());
 
 
-
+                //pops off the original stack and puts it in a stack place holder 
                 bCheck = true;
                 while (bCheck)
                 {
@@ -178,12 +211,15 @@ namespace DataStructuresGROUP
             return base.Delete();
         }
 
+        //clears the stack 
         public override string Clear()
         {
             stkStructure.Clear();
             return base.Clear();
         }
 
+        //searches for item in stack based on user input
+        //times how long it takes whether it is found or not found
         public override string Search()
         {
             Console.WriteLine("What do you want to search for in the stack?");
@@ -205,7 +241,7 @@ namespace DataStructuresGROUP
         }
     }
 
-
+    //queue menu options
     class myQueue : MasterStructure
     {
         Queue<string> qStructure = new Queue<string>();
@@ -214,6 +250,7 @@ namespace DataStructuresGROUP
         int input = 0;
         string sInput;
 
+        //adds one item to the queue
         public override string AddOne()
         {
             Console.Write("Enter a string to add to the Queue: ");
@@ -223,6 +260,7 @@ namespace DataStructuresGROUP
             return base.AddOne();
         }
 
+        //adds 2000 entries to the queue
         public override string AddHuge()
         {
             qStructure.Clear();
@@ -235,6 +273,8 @@ namespace DataStructuresGROUP
             return base.AddHuge();
         }
 
+        //displays items in the queue
+        //alerts user if queue is empty
         public override string Display()
         {
             if(qStructure.Count == 0)
@@ -253,6 +293,8 @@ namespace DataStructuresGROUP
             return base.Display();
         }
 
+        //deletes item in queue based on user input 
+        //alerts user if queue is empty
         public override string Delete()
         {
             Queue<string> qplaceholder = new Queue<string>();
@@ -267,6 +309,9 @@ namespace DataStructuresGROUP
 
                 string inputdelete = readString(Console.ReadLine());
 
+                //queue place holder created to hold the items while it dequeues items until the desired
+                // item is deleted. if not found user is alerted
+                //all items are placed back into original queue
                 bool checkdelete = true;
                 while (checkdelete)
                 {
@@ -299,12 +344,15 @@ namespace DataStructuresGROUP
             return base.Delete();
         }
 
+        //clears queue
         public override string Clear()
         {
             qStructure.Clear();
             return base.Clear();
         }
 
+        //user searches for item in queue
+        //times response whether found or not
         public override string Search()
         {
             Console.WriteLine("What do you want to search for in the queue? ");
@@ -327,12 +375,12 @@ namespace DataStructuresGROUP
         }
     }
 
-
+    //dictionary options
     class myDictionary : MasterStructure
     {
         Dictionary<string, int> dStructure = new Dictionary<string, int>();
 
-
+        //variables 
         int iUserInput = 0;
         string sName;
         int iNumName;
@@ -345,6 +393,7 @@ namespace DataStructuresGROUP
         bool uInput = false;
         bool bUserIntInput = false;
 
+        //adds one item to the dictionary from user input
         public override string AddOne()
         {
             uInput = false;
@@ -392,6 +441,7 @@ namespace DataStructuresGROUP
             return base.AddOne();
         }
 
+        //adds 2000 entries to the dictionary 
         public override string AddHuge()
         {
             dStructure.Clear();
@@ -407,6 +457,8 @@ namespace DataStructuresGROUP
             return base.AddHuge();
         }
 
+        //displays all items in dictionary
+        //alerts user if dictionary is empty
         public override string Display()
         {
 
@@ -426,6 +478,8 @@ namespace DataStructuresGROUP
             return base.Display();
         }
 
+        //deletes item in dicitionary based on user input
+        //alerts user if dictionary is empty
         public override string Delete()
         {
             uInput = false;
@@ -512,12 +566,14 @@ namespace DataStructuresGROUP
             return base.Delete();
         }
 
+        //clears the dictionary 
         public override string Clear()
         {
             dStructure.Clear();
             return base.Clear();
         }
 
+        //searches for item in dictionary based on user input
         public override string Search()
         {
             uInput = false;
