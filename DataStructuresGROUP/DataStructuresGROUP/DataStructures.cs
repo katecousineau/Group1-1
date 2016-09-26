@@ -398,7 +398,7 @@ namespace DataStructuresGROUP
 
             while (iCount < 2000) //while loops adds 2000 entries to the dictionary
             {
-                dStructure.Add("New Entry " + iCount, iCount);
+                dStructure.Add("New Entry " + (iCount+1), iCount+1);
                 iCount++;
             }
 
